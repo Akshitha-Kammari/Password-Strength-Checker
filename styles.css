@@ -1,0 +1,108 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Glassmorphism Card */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 40px 35px;
+    width: 360px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.container h1 {
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Password Input */
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.9);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(255,255,255,0.7);
+}
+
+/* Strength Bars */
+.indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.indicator span {
+    width: 32%;
+    height: 12px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+/* Strength Colors */
+.weak {
+    background: linear-gradient(90deg, #ff4d4d, #ff6b6b) !important;
+    box-shadow: 0 0 10px rgba(255,77,77,0.8);
+}
+
+.medium {
+    background: linear-gradient(90deg, #ffc107, #ffdd57) !important;
+    box-shadow: 0 0 10px rgba(255,193,7,0.8);
+}
+
+.strong {
+    background: linear-gradient(90deg, #00e676, #00c853) !important;
+    box-shadow: 0 0 10px rgba(0,230,118,0.9);
+}
+
+/* Strength Text */
+#strength-text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
